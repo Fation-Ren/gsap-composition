@@ -8,6 +8,9 @@ GSAP 使用官方 [GreenSock](https://github.com/greensock/GSAP) 库，提供三
 
 将此目录放入任意 `.claude/skills/` 下即可作为 Claude Code 技能使用。
 
+## 多平台环境安装
+参考 [news-to-video](https://github.com/Fation-Ren/news-to-video)
+
 依赖：
 ```bash
 npm install gsap          # GSAP 动画库（必需）
@@ -17,6 +20,13 @@ npx hyperframes            # HTML → MP4 渲染（可选，首次自动安装�
 ```
 
 ## 快速开始
+```bash
+# demo
+使用技能gsap-composition，文案内容 doc/xxx.md 输出视频
+# 视频问题直接描述，问题示例
+1. 配音比视频落后一个场景，需要重新调整
+2. 字幕没有显示
+```
 
 ```bash
 # 1. 环境检查
@@ -60,3 +70,15 @@ bash scripts/render.sh <项目目录> <TTS总时长>
 1. **场景时间对齐**：HTML 场景时间取自 `timing_reference.md` 精确值，禁止使用预估时长
 2. **TTS 先行**：TTS 配音总时长 = 视频总时长，动画匹配音频
 3. **Canvas 优先**：长视频 (>2min) 或含复杂排版时，Canvas 立即模式比 DOM 更可靠
+
+## 功能扩展
+
+1. 该功能和news-to-video技能有部分重叠。都是独立的技能。如果同时安装，直接让Claude Code进行skill检查
+``` bash
+帮我检查skills，是否包含冲突和无限制注入导致的上下文滥用
+```
+> 按照指示去调整，SKIP软路由配置。
+
+2. 该功能只保留了视频生成部分，如果需要添加自媒体口语化，开头，结尾等部分，参考 [news-to-video](https://github.com/Fation-Ren/news-to-video)技能
+
+3. 有其他需求的可以提issues，技能会持续更新
