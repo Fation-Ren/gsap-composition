@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+*.log
+output/
+output-video/
+audio/
+tts_segments/
+*.mp4
+*.mp3
+timing_reference.md
+tts_script.md
+concat-list.txt
