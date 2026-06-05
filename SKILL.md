@@ -1,6 +1,7 @@
 ---
 name: gsap-composition
-description: 从源内容（研究文档、文章、数据报告等）出发，生成 tts_script.md 结构化文案，再转换为 GSAP 驱动的视频场景 HTML。GSAP 使用官方 GreenSock 库（https://github.com/greensock/GSAP），支持 npm/CDN/本地三种安装方式。提供三种渲染方案：连续画布（DOM）、滚动画布（Swipe-Slider）、纯 Canvas 2D（高可靠性长视频首选）。覆盖完整管线：源内容 → tts_script.md → HTML+GSAP 动画 → 视频渲染。不负责 PPT 幻灯片制作。TRIGGER when: 用户提供文章/文档/数据等源内容要求"生成视频场景""GSAP动画合成""文案转视频场景""gsap composition""生成tts脚本""写视频文案"；用户提供 tts_script.md 格式的结构化文案；用户遇到 DOM 渲染异常需要 Canvas 替代方案。
+description: 从源内容（研究文档、文章、数据报告等）出发，生成 tts_script.md 结构化文案，再转换为 GSAP 驱动的视频场景 HTML。GSAP 使用官方 GreenSock 库（https://github.com/greensock/GSAP），支持 npm/CDN/本地三种安装方式。提供三种渲染方案：连续画布（DOM）、滚动画布（Swipe-Slider）、纯 Canvas 2D（高可靠性长视频首选）。覆盖完整管线：源内容 → tts_script.md → HTML+GSAP 动画 → 视频渲染。不负责 PPT 幻灯片制作。SKIP when: 用户需要网页演示文稿（非视频）→ frontend-slides；用户已有 PPT HTML 幻灯片要转视频 → ppt-to-video；用户需要录屏+旁白演示视频 → video-presentation；用户创建非结构化 HyperFrames 合成（无营销文案输入）→ hyperframes；用户需要做内容规划、TTS脚本、选题调研 → news-to-video。TRIGGER when: 用户提供文章/文档/数据等源内容要求"生成视频场景""GSAP动画合成""文案转视频场景""gsap composition""生成tts脚本""写视频文案"；用户提供 tts_script.md 格式的结构化文案；用户遇到 DOM 渲染异常需要 Canvas 替代方案。
+version: 1.0.6
 ---
 
 # GSAP Composition
@@ -8,6 +9,40 @@ description: 从源内容（研究文档、文章、数据报告等）出发，�
 从源内容到视频场景的完整管线：**源内容 → tts_script.md → HTML + GSAP 动画 → 视频渲染**。GSAP 使用官方 GreenSock 动画库。
 
 输入：研究文档 / 文章 / 数据报告 / 现有 tts_script.md。输出：可直接渲染的视频 HTML。
+
+## 安装与更新
+
+### 安装（用户执行）
+
+```bash
+# 方式 A：npm exec（推荐）
+npm exec --package=@fation-ren/gsap-composition -c "gsap-composition"
+
+# 方式 B：npx（部分版本可能报 command not found）
+npx @fation-ren/gsap-composition
+```
+
+该命令将 skill 文件安装到 `~/.claude/skills/gsap-composition/`，重启 Claude Code 或 `/clear` 后生效。
+
+### 更新
+
+```bash
+npx @fation-ren/gsap-composition@latest
+```
+
+install 脚本会自动比对 `.version` 文件，已是最新版则跳过，旧版则覆盖升级。
+
+### 检查当前版本
+
+```bash
+cat ~/.claude/skills/gsap-composition/.version
+```
+
+### 卸载
+
+```bash
+rm -rf ~/.claude/skills/gsap-composition
+```
 
 ## 环境检查与安装
 

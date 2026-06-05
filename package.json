@@ -1,0 +1,31 @@
+{
+  "name": "@fation-ren/gsap-composition",
+  "version": "1.0.6",
+  "description": "Claude Code skill — 从源内容到 GSAP 视频场景的完整管线",
+  "bin": "./install.js",
+  "files": [
+    "SKILL.md",
+    "scripts/",
+    "references/",
+    "install.js"
+  ],
+  "keywords": [
+    "claude-code",
+    "skill",
+    "gsap",
+    "video",
+    "animation",
+    "composition",
+    "tts",
+    "hyperframes"
+  ],
+  "author": "Fation-Ren",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fation-Ren/gsap-composition.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

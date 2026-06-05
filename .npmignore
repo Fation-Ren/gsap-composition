@@ -1,0 +1,15 @@
+.git
+.gitignore
+node_modules
+*.log
+output/
+output-video/
+audio/
+tts_segments/
+*.mp4
+*.mp3
+timing_reference.md
+tts_script.md
+concat-list.txt
+.DS_Store
+README.md

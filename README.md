@@ -6,6 +6,24 @@ GSAP 使用官方 [GreenSock](https://github.com/greensock/GSAP) 库，提供三
 
 ## 安装
 
+```bash
+# 方式 A：npm exec（推荐）
+npm exec --package=@fation-ren/gsap-composition -c "gsap-composition"
+
+# 方式 B：npx（部分版本可能报 command not found）
+npx @fation-ren/gsap-composition
+```
+
+该命令将 skill 文件安装到 `~/.claude/skills/gsap-composition/`。
+
+### 更新
+
+```bash
+npx @fation-ren/gsap-composition@latest
+```
+
+### 手动安装
+
 将此目录放入任意 `.claude/skills/` 下即可作为 Claude Code 技能使用。
 
 ## 多平台环境安装
